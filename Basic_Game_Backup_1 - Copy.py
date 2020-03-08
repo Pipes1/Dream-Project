@@ -24,7 +24,6 @@ def game():
     running = True
     while running:
         screen.fill((0, 0, 0))
-        music.play('lmao')
 
         finalbossdamage = int
 
