@@ -45,7 +45,7 @@ def game():
 
         dotheybesure = int
 
-        version = "alpha indev V0.3"
+        version = "alpha indev V0.5"
 
         turn = str
 
