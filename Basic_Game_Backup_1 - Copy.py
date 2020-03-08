@@ -23,7 +23,9 @@ def draw_text(text, font, color, surface, x, y):
 def game():
     running = True
     while running:
-        screen.fill((0,0,0))
+        screen.fill((0, 0, 0))
+        music.play('lmao')
+
         finalbossdamage = int
 
         loopage = int
@@ -36,8 +38,6 @@ def game():
 
         defense = int
 
-        win = int
-
         code = int
 
         damage = int
@@ -48,19 +48,18 @@ def game():
 
         version = "alpha indev V0.3"
 
-        turn = int
+        turn = str
 
-        draw_text("""Whenever a choice appea
-        rs type the resp
-        onse you want in all lowercase letters""", font, (255, 255, 255), screen, 400, 500)
+        turn == 'your turn'
 
-        print('WARNING! The Are You Sure System Is WIP So DO NOT USE IT!')
+        #draw_text("""Whenever a choice appea
+        #rs type the resp
+        #onse you want in all lowercase letters""", font, (255, 255, 255), screen, 400, 500)
+        #print('WARNING! The Are You Sure System Is WIP So DO NOT USE IT!')
 
         bosshealth = int
 
         playerhealth = int
-
-        randamage = int
 
         items = int(input("Do You Have Any Codes For Items? If Not Type 1"))
         if items == 1:
@@ -83,7 +82,6 @@ def game():
                 dotheybesure = int(input("""Are You Sure You Want Ha
                 rd? Type 5 If Not, 4 If Sure"""))
             return dotheybesure
-
         dotheybesure = user(persinput)
         if dotheybesure == 1:
             print("""Welcome To Bethesda's Game Engine In A Nutshell!
@@ -106,12 +104,10 @@ def game():
                 if (turnswitcher % 2) == 0:
                     turn == "Your Turn"
                 bosshealth = 1
-
                 print('Remaining Health Is', playerhealth, '''
                 Remaining Boss Health Is ''', bosshealth, '''
                 It Is ''' , turn, 'You can attack')
                 loopage = loopage+1
-
         while loopage == 1:
             attack = int(input("Would You Like To Attack? 1 For Yes, 2 For No."))
             if items == 1:
@@ -154,8 +150,7 @@ def game():
                     turn = "Boss' Turn"
                     print('Remaining Health Is', playerhealth, '''
                     Remaining Boss Health Is ''', bosshealth, ''' It Is
-                    ''', turn, 'You can defend')
-
+                    ''' , turn, 'You can defend')
                     defend = input("Would You Like To Defend? 1 For Yes, 2 For No.")
                     bossdamage = random.randint(1, 30)
                     if defend == 1:
@@ -195,11 +190,9 @@ def game():
             if (turnswitcher % 2) == 0:
                 turn == "Your Turn"
             bosshealth = 1
-
             print('Remaining Health Is', playerhealth, ''' Remaining Boss
             Health Is ''', bosshealth, ' It Is', turn, 'You can attack')
             loopage = loopage+1
-
         while loopage == 1:
             attack = int(input("Would You Like To Attack? 1 For Yes, 2 For No."))
             if items == 1:
